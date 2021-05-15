@@ -32,5 +32,12 @@ namespace AddingTwoMinimalsTests
             int[] array = new int[100000];
             Assert.Throws<ArgumentOutOfRangeException>(() => Program.GetMinimalsSum(array));
         }
+
+        [Test]
+        public void NormalTest()
+        {
+            int[] array = { 1, 2, -1, 5, 22 };
+            Assert.AreEqual(0, Program.GetMinimalsSum(array));
+        }
     }
 }
